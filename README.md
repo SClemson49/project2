@@ -1,4 +1,4 @@
-# Project Pitch
+# Pokemon Party
 ## Need that perfect team with the perfect types? Look no further! just search by type and add it to your squad! Or, if you know who you want, just pick them specifically!
 
 
