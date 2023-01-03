@@ -17,6 +17,6 @@ app.get('/pokemon', (req, res) => {
 
 
 // listeners AT BOTTOM
-app.listen(8000, (req,res) => {
+app.listen(PORT, (req,res) => {
     // console.log(`listening on : ${PORT}`)
 })

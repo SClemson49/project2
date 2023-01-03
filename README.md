@@ -19,10 +19,18 @@
 
 ![wireframe](./images/project-2-wireframe.PNG)
 
+## User stories
+* Users will make an account with a username and password
+* Users will be able to look up certain pokemon to see the type
+* Users will be able to see if the Pokemon belongs to other users parties
+* Users will be able to add/remove Pokemon from their party
+
+
+
 ## MVP
 * able to search through the original 151 to craft a team
-* search by type, and pokemon in users squads
-* add and delete from your squad
+* search by type, and pokemon in users party
+* add and delete from your party
 
 ## STRETCH (LOL)
 * Attaching pictures and styles
