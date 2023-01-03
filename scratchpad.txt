@@ -1,0 +1,10 @@
+set up routes
+
+add pages i need
+
+link api
+
+add crypto / user table 
+
+teams would have a user id 1:M
+joined table pomemon teams M:N
