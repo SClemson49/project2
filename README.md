@@ -12,9 +12,12 @@
 
 ## RRC
 
+![RRD](./images/project-2-rrd.PNG)
 
 
 ## WARFRAMES
+
+![wireframe](./images/project-2-wireframe.PNG)
 
 ## MVP
 * able to search through the original 151 to craft a team
