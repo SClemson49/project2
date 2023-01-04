@@ -9,4 +9,4 @@ add crypto / user table
 teams would have a user id 1:M
 joined table pomemon teams M:N
 
-sequelize model:create --name pokemon --attributes name:string
+sequelize model:create --name user --attributes email:string,password:string
