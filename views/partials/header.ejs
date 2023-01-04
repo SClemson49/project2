@@ -4,7 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>POKEMON</title>
+    <title>Pokemon</title>
 </head>
 <body>
-    <h1>POKEMON AUTH</h1>
+    <nav>
+        <ul>
+            <!-- show home whether the user is logged in or not -->
+            <li><a href='/'>Home</a></li>
+            <% if (user) { %>
+                <!-- show these if user is logged -->
+                <li><a href="/users/profile">Profile</a></li>
+                <li><a href="/users/logout">Logout</a></li>
+            <% } else { %>
+                <!-- show these if user not logged in -->
+                <li><a href="/users/new">Sign Up</a></li>
+                <li><a href="/users/login">Login</a></li>
+            <% } %>
+        </ul>
+    </nav>
+    <h1>Pokemon</h1>
