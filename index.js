@@ -7,11 +7,12 @@ const cryptoJS = require('crypto-js')
 
 const app = express()
 const PORT = process.env.PORT || 8000
-
-// MIDDLEWARE
 app.set('view engine', 'ejs')
+// MIDDLEWARE
+
+
 app.get('/', (req, res) => {
-    res.send('<h1>BLEHHHHHHHHHHHHH</h1>')
+    res.render('home.ejs')
 })
 
 
