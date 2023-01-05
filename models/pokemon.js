@@ -5,12 +5,12 @@ const {
 module.exports = (sequelize, DataTypes) => {
     class pokemon extends Model{
     static associate(models){
-            this.hasMany(models.Pokemon)
+            this.hasMany(models.pokemon)
         }
     }
     pokemon.init({
         name: DataTypes.STRING,
-        type: DataTypes.OBJECT
+        // type: DataTypes.OBJECT
     },{
         sequelize, 
         modelName: 'pokemon'
@@ -22,6 +22,8 @@ module.exports = (sequelize, DataTypes) => {
 
 // pokemon type: array of objects
 // loop through types in case of multiples
+// for in loop? 
+
 /// types.type.name
 
 // parties_pokemon is an embedded model that connects pokemons to parties

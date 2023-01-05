@@ -1,11 +1,12 @@
 'use strict'
 const {
-    Model, INTEGER
+    Model
 } = require('sequelize')
 module.exports = (sequelize, DataTypes) => {
     class parties_pokemons extends Model{
         static associate(models){
             // associate!!
+            // this.belongsToMany(models.user)
 
         }
     }

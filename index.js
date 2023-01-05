@@ -70,3 +70,12 @@ app.use('/users', require('./controllers/users'))
 app.listen(PORT, () => {
     console.log(`authenticating users on PORT ${PORT}`)
 })
+
+
+app.get((req, res)=> {
+    let pokeName = 'http://pokeapi.co/api/v2/pokemon/name'
+    axios.get(pokeName).then(apiResponse => {
+        let pokemonName = apiResponse.data.results
+        console.log(pokeName)
+    })
+})
