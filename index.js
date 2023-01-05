@@ -1,6 +1,8 @@
 // required packages
 require('dotenv').config()
 const express = require('express')
+const axios = require('axios')
+// const ejsLayouts = require('express-ejs-layouts')
 const cookieParser = require('cookie-parser')
 const db = require('./models')
 const crypto = require('crypto-js')
@@ -12,6 +14,7 @@ app.set('view engine', 'ejs')
 // parse request bodies from html forms
 app.use(express.urlencoded({ extended: false }))
 // tell express to parse incoming cookies
+// app.use(ejsLayouts)
 app.use(cookieParser())
 
 // custom auth middleware that checks the cookies for a user id
@@ -65,5 +68,5 @@ app.use('/users', require('./controllers/users'))
 
 // listen on a port
 app.listen(PORT, () => {
-    console.log(`authenticating users on PORT ${PORT} 🔐`)
+    console.log(`authenticating users on PORT ${PORT}`)
 })
