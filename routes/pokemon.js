@@ -12,5 +12,19 @@ router.get('/', async (req, res) =>{
 
 // router.post
 
+// get api
+
+router.get('/:name', async (req, res) => {
+    try {
+      res.send(req.params.name)
+      const apiUrl = `http://pokeapi.co/api/v2/pokemon/`
+      const foundData = await axios.get(apiUrl)
+      // render shows?
+    }catch (err){
+      console.error(err)
+    }
+  })
+
+
 
 module.exports = router
