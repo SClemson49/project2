@@ -1,0 +1,18 @@
+<%- include('partials/header.ejs') %>
+<div>
+  <h1>
+    <%= pokemon.name %>
+  </h1>
+  <form method="POST" action="/parties">
+          
+    <button class="submitParty" type="submit">Add to Party</button>
+    <input hidden value="<%= pokemon.name %>" name="name" />
+
+        
+  </form>
+</div>
+
+
+
+
+<%- include('partials/footer.ejs') %>

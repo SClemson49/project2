@@ -45,19 +45,40 @@ app.get('/', (req, res) => {
         user: res.locals.user
     })
 })
+app.get('/pokemon', (req, res) =>{
+    res.render('pokemon.ejs', {
+    })
+})
 
 app.use('/users', require('./controllers/users'))
+app.use('/parties', require('./controllers/parties'))
+// app.use('/pokemon', require('./controllers/pokemon'))
 
-// listen on a port
-app.listen(PORT, () => {
-    console.log(`authenticating users on PORT ${PORT}`)
+
+
+
+app.get('/search', (req, res)=> {
+    console.log(req.query)
+    let pokeName = `http://pokeapi.co/api/v2/pokemon/${req.query.pokemonName}`
+    axios.get(pokeName).then(apiResponse => {
+        let pokemonName = apiResponse.data.results
+        console.log(apiResponse.data)
+        // res.json(apiResponse.data)
+        // get the currently logged in users parties and pass them to template to render
+        res.render('pokemon', { pokemon: apiResponse.data })
+
+    })
 })
 
 
-app.get((req, res)=> {
-    let pokeName = 'http://pokeapi.co/api/v2/pokemon/'
-    axios.get(pokeName).then(apiResponse => {
-        let pokemonName = apiResponse.data.results
-        console.log(pokeName)
-    })
+
+
+
+
+
+
+
+// listen on a port
+app.listen(PORT, () => {
+    console.log(`authenticating users on PORT: ${PORT}`)
 })

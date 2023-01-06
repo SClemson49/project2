@@ -10,5 +10,8 @@ teams would have a user id 1:M
 joined table pomemon teams M:N
 
 sequelize model:create --name user --attributes email:string,password:string
+sequelize model:create --name pokemon --attributes name:string
+sequelize model:create --name party --attributes name:string,userId:integer
+sequelize model:create --name parties_pokemon --attributes partyId:integer,pokemonId:integer
 
 

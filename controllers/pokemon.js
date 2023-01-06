@@ -4,11 +4,6 @@ const router = express.Router()
 const db = require('../models')
 
 
-router.get('/', async (req, res) =>{
-    try {
-        // to do : get pokemon in parties and render to views
-    }
-})
 
 // router.post
 
@@ -19,12 +14,16 @@ router.get('/:name', async (req, res) => {
       res.send(req.params.name)
       const apiUrl = `http://pokeapi.co/api/v2/pokemon/`
       const foundData = await axios.get(apiUrl)
-      // render shows?
-    }catch (err){
+      }catch (err){
       console.error(err)
     }
   })
 
+router.post('/', (req, res) =>{
+  res.send(req.body)
+})
 
 
 module.exports = router
+
+

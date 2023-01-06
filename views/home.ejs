@@ -1,8 +1,8 @@
 <%- include('partials/header.ejs') %>
 
-<h2>shorts are comfy and easy to wear!</h2>
-
-<input type="text" placeholder="Search for Pokémon...">
+<h2>Shorts are comfy and easy to wear!</h2>
+<form method="GET" action="/search">
+<input type="text" placeholder="Search for Pokémon..." name="pokemonName">
 <button type="submit">🔍</button>
-
+</form>
 <%- include('partials/footer.ejs') %>
