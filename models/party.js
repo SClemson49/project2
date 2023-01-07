@@ -10,8 +10,8 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // models.party.belongsTo(models.user)
-      // models.party.belongsToMany(models.pokemon,{ through: 'parties_pokemon'})
+      models.party.belongsTo(models.user)
+      models.party.belongsToMany(models.pokemon,{ through: 'parties_pokemon'})
     }
   }
   party.init({

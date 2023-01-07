@@ -1,5 +1,11 @@
 <%- include('../partials/header', { user }) %>
 
-<h3><%= user.email %>'s Pokėmon team!</h3>
+<h3><%= user.email %>'s Pokémon parties!</h3>
+
+<select name="party" id="party">
+    <option value="Party 1">Party 1</option>
+    <option value="Party 2">Party 2</option>
+    <option value="Party 3">Party 3</option>
+</select>
 
 <%- include('../partials/footer') %>

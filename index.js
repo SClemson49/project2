@@ -52,7 +52,7 @@ app.get('/pokemon', (req, res) =>{
 
 app.use('/users', require('./controllers/users'))
 app.use('/parties', require('./controllers/parties'))
-// app.use('/pokemon', require('./controllers/pokemon'))
+app.use('/pokemon', require('./controllers/pokemon'))
 
 
 
@@ -65,7 +65,8 @@ app.get('/search', (req, res)=> {
         console.log(apiResponse.data)
         // res.json(apiResponse.data)
         // get the currently logged in users parties and pass them to template to render
-        res.render('pokemon', { pokemon: apiResponse.data })
+        res.render('pokemon', {pokemon: apiResponse.data })
+        // user: res.locals.user add to render?
 
     })
 })
