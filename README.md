@@ -12,10 +12,10 @@
 
 ## RRC
 
-![RRD](./images/project-2-rrd.PNG)
+![RRC](./images/project-2-rrd.PNG)
 
 
-## WARFRAMES
+## WIREFRAMES
 
 ![wireframe](./images/project-2-wireframe.PNG)
 
@@ -32,6 +32,6 @@
 * search by type, and pokemon in users party
 * add and delete from your party
 
-## STRETCH (LOL)
+## STRETCH GOALS
 * Attaching pictures and styles
 * creating multiple teams and saving them as groups of six
