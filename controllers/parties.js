@@ -12,6 +12,7 @@ router.post('/', async (req, res)=>{
         })
         if (created){
             // console.log(req.query.pokemonName)
+            
         }
     // findOrCreate the party from req.body
 
