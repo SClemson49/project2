@@ -80,12 +80,16 @@ router.get('/logout', (req, res) => {
     res.redirect('/')
 })
 
-router.get('/profile', (req, res) => {
+router.get('/profile', async (req, res) => {
     if (!res.locals.user) {
         res.redirect('/users/login?message=You must log in!')
     } else {
+        const parties = await res.locals.user.getParties({
+            include: [db.pokemon]
+        })
+        console.log(parties)
         res.render('users/profile.ejs', {
-            user: res.locals.user
+            user: res.locals.user, parties: parties
         })
     }
 })

@@ -2,6 +2,13 @@
 
 <h3><%= user.email %>'s Pokémon parties!</h3>
 
+<% parties.forEach(party => { %>
+    <p><%= party.name %></p>
+        <% party.pokemons.forEach(pokemon => { %>
+    <p><%= pokemon.name %></p>
+       <% }) %>
+<%})%>
+
 <select name="party" id="party">
     <option value="Party 1">Party 1</option>
     <option value="Party 2">Party 2</option>

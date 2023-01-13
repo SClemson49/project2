@@ -4,21 +4,23 @@ const db = require('../models')
 
 
 router.post('/', async (req, res)=>{
-    res.send(req.body)
+    // res.send(req.body)
     // findOrCreate name is in req.body
-        const [users, created] = await users.findOrCreate({
-            where: {name: req.query.pokemonName},
-
+        const [pokemon] = await db.pokemon.findOrCreate({
+            where: {name: req.body.name},
+                
         })
-        if (created){
-            // console.log(req.query.pokemonName)
-            
-        }
+                console.log(pokemon)
+        const [party] = await db.party.findOrCreate({
+            where: {name: req.body.party, userId: res.locals.user.id},
+        
+        })
     // findOrCreate the party from req.body
 
     // associate the pokemon with the party
-
+    await party.addPokemon(pokemon)
     // redirect to users profile
+    res.redirect('/users/profile')
 })
 
 
