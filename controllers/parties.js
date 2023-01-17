@@ -23,22 +23,6 @@ router.post('/', async (req, res)=>{
 }) 
 
 
-// // router.delete
-// router.delete('/', async (req, res)=>{
-//     // find pokemon
-//     const [pokemon] = await db.pokemon.findOrCreate({
-//         where: {name: req.body.name},               
-//     })
-
-// // find party
-// const [party] = await db.party.findOrCreate({
-//     where: {name: req.body.party, userId: res.locals.user.id},        
-// })
-
-// // party.removePokemon
-// await party.removePokemon(pokemon)
-// res.redirect('/users/profile')
-// })
 
 
 

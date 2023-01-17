@@ -33,10 +33,6 @@ app.use(async (req, res, next) => {
 })
 
 
-app.use((req, res, next) => {
-    console.log(`incoming request: ${req.method} - ${req.url}`)
-    next()
-})
 
 // routes and controllers
 app.get('/', (req, res) => {
@@ -45,10 +41,7 @@ app.get('/', (req, res) => {
         user: res.locals.user
     })
 })
-app.get('/pokemon', (req, res) =>{
-    res.render('pokemon.ejs', {
-    })
-})
+
 
 app.use('/users', require('./controllers/users'))
 app.use('/parties', require('./controllers/parties'))
@@ -61,12 +54,12 @@ app.get('/search', (req, res)=> {
     console.log(req.query)
     let pokeName = `http://pokeapi.co/api/v2/pokemon/${req.query.pokemonName}`
     axios.get(pokeName).then(apiResponse => {
-        let pokemonName = apiResponse.data.results
+        
         console.log(apiResponse.data)
         // res.json(apiResponse.data)
         // get the currently logged in users parties and pass them to template to render
-        res.render('pokemon', {pokemon: apiResponse.data })
-        // user: res.locals.user add to render?
+        res.render('pokemon', {pokemon: apiResponse.data, user: res.locals.user })
+    
 
     })
 })

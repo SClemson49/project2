@@ -9,19 +9,26 @@
        <% }) %>
 <%})%>
 
-<!-- <select name="party" id="party">
-    <option value="Party 1">Party 1</option>
-    <option value="Party 2">Party 2</option>
-    <option value="Party 3">Party 3</option>
-</select> -->
 
-<form method="GET" action="pokemon">
-<button class="removePokemon" type="submit">Remove Pokemon from Party</button>
-<input type="text" name="name"/>
-<select name="party" id="party">
-    <option value="Party 1">Party 1</option>
-    <option value="Party 2">Party 2</option>
-    <option value="Party 3">Party 3</option>
+<form method="POST" action="/pokemon?_method=delete"> 
+    <select name="party" id="party">
+      <% parties.forEach(party => { %>
+        <option value="<%= party.name %>"><%= party.name %></option>
+           <% }) %>
   </select>
+  <input type="text" name="name"/>
+  <button class="removePokemon" type="submit">Remove Pokemon from Party</button>
+
+</form>
+<form method="POST" action="/pokemon?_method=put"> 
+    <select name="party" id="party">
+      <% parties.forEach(party => { %>
+        <option value="<%= party.name %>"><%= party.name %></option>
+           <% }) %>
+
+  </select>
+  <input type="text" name="name"/>
+  <button class="changeParty" type="submit">Change Party Name</button>
+
 </form>
 <%- include('../partials/footer') %>

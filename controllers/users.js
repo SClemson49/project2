@@ -4,6 +4,9 @@ const db = require('../models')
 const router = express.Router()
 const crypto = require('crypto-js')
 const bcrypt = require('bcrypt')
+const methodOverride = require('method-override')
+
+router.use(methodOverride('_method'))
 
 // GET /users/new 
 router.get('/new', (req, res) => {
