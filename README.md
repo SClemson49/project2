@@ -1,6 +1,14 @@
 # Pokemon Party
 ## Need that perfect team with the perfect types? Look no further! just search by type and add it to your squad! Or, if you know who you want, just pick them specifically!
 
+## Installation Instructions
+* Fork and Clone this repo to your local directory
+* Navigate to the repo and run `npm i` to install all dependncies
+* Make sure to include `node_modules` and `.env` in the. `gitignore`!
+* Create database by running `sequelize db:create` and migrate models with `sequelize db:migrate`
+
+## Link to Project Launch!
+* https://project2-pokemon.herokuapp.com/
 
 
 ## API
