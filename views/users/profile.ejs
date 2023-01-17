@@ -9,13 +9,19 @@
        <% }) %>
 <%})%>
 
+<!-- <select name="party" id="party">
+    <option value="Party 1">Party 1</option>
+    <option value="Party 2">Party 2</option>
+    <option value="Party 3">Party 3</option>
+</select> -->
+
+<form method="GET" action="pokemon">
+<button class="removePokemon" type="submit">Remove Pokemon from Party</button>
+<input type="text" name="name"/>
 <select name="party" id="party">
     <option value="Party 1">Party 1</option>
     <option value="Party 2">Party 2</option>
     <option value="Party 3">Party 3</option>
-</select>
-
-
-
-
+  </select>
+</form>
 <%- include('../partials/footer') %>
