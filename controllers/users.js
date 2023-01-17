@@ -40,6 +40,17 @@ router.post('/', async (req, res) => {
     }
 })
 
+// PUT change password
+// const hashedPassword = bcrypt.hashSync(req.body.password, 12)
+
+router.put('./', async (req, res) => {
+    hashedPassword = bcrypt.hashSync(req.body.password, 12)
+
+    }
+)
+
+    
+
 // GET /users/login 
 router.get('/login', (req, res) => {
     res.render('users/login.ejs', {
